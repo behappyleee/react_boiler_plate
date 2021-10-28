@@ -37,6 +37,10 @@ for 문이나 while 문을 사용하는대 신 recursion 을 활용하여 해결
 반복문에 비해 Recursion 은 프로그램 실행속도면에서 손해를 보게 됨 (Recursion 을 남용하면 안됨)
 Recursion 단점은 계속해서 함수를 호출하게 되므로 오버헤드가 있음 (매개변수 전달, 시스템 스택, 액티베이션 프레임 생성등 .. )
 
+Recursion 설계하는 방법 .... 
+Recursion 은 적어도 하나의 base case, 즉 순환 되지않고 종료되는 case 가 있어야 함
+모든 case 는 결국 base case 로 수렴해야 함 
+base case 가 없을 시 무한 루프에 걸리게 됨(Recursion 이 자기자신을 항상 호출하게 됨)
 
 
 
