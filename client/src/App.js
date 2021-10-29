@@ -18,8 +18,8 @@ function App() {
         </Route>
         <Route path="/login" component={LoginPage}>
         </Route>
-        <Route path="/register">
-          <RegisterPage />
+        <Route path="/register" component={RegisterPage}>
+          {/*<RegisterPage /> */}
         </Route>
       </Switch>
     </div>

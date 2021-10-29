@@ -42,12 +42,9 @@ app.get('/api/hello', (req, res) => {
 })
 
 app.post('/api/users/register', (req, res) => {
-
     // 회원가입 할 때 필요한 정보들을 client 에서 가져오면
     // 그것들을 데이터 베이스에 넣어준다
-
     const user = new User(req.body)
-
     // save 는 mongodb에서 오는 method
     user.save((err, userInfo) => {
         if(err) return res.json({success : false, err })
@@ -91,7 +88,6 @@ app.post('/api/users/login', (req, res) => {
 // Local 환경은 development 배포 한 후는 Production
 // callback 함수 부르기 전에 중간에서 auth 가 처리를 해줌
 app.get('/api/users/auth', auth, (req, res) => {
-
   // 여기까지 미들웨어를 통과해 왔다는 얘기는 Authentification이 True 라는 말
   res.status(200).json({
     _id: req.user._id,
@@ -104,7 +100,6 @@ app.get('/api/users/auth', auth, (req, res) => {
     role: req.user.role,
     image: req.user.image
   })
-
 }) 
 
 app.get('/api/users/logout', auth, (req, res) => {

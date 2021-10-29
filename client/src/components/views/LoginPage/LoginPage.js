@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 import { useDispatch } from 'react-redux';
 import { loginUser } from '../../../_action/user_action';
 
@@ -56,6 +56,7 @@ function LoginPage(props) {
                <input type="email" value={Email} onChange={onEmailHandler}/>
                <label>Password</label>
                <input type="password" value={Password} onChange={onPasswordHandler}/>
+
                <button type="submit">
                    Login
                </button>
@@ -64,4 +65,4 @@ function LoginPage(props) {
     )
 }
 
-export default LoginPage
+export default LoginPage;
