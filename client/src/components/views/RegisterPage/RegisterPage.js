@@ -38,7 +38,7 @@ function RegisterPage(props) {
             name: Name
         }
 
-        dispatch(registerUser(body))
+         dispatch(registerUser(body))
             .then(response => {
                 console.log(response.payload.success)
                 if(response.payload.success) {
