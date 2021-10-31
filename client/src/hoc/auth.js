@@ -11,7 +11,7 @@ export default function (SpecificComponent, option, adminRoute = null) {
 
         const dispatch = useDispatch();
 
-        // useEffect 는 기본 react class 형에서만 사용이 가능하였지만 그 기능을 함수형 에서도 사용가능하게 해주는 함수
+        // useEffect 는 기본 react class 형에서만 사용이 가능하였지만 그 기능을 함수형 에서도 사용가능하게 해주는 함수 (함수형 컴포넌트에서도 라이프 사이클을 사용가능하게 해줌)
         useEffect(() => {
             dispatch(auth())
                 .then(response => {
