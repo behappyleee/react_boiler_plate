@@ -90,6 +90,7 @@ app.post('/api/users/login', (req, res) => {
 app.get('/api/users/auth', auth, (req, res) => {
   // 여기까지 미들웨어를 통과해 왔다는 얘기는 Authentification이 True 라는 말
   res.status(200).json({
+    // 모든것을 처리한 뒤 유저정보를 넘겨 줌 (로그인 된 사람인지 맞으면 true 아니면 false)
     _id: req.user._id,
     // Role Code는 개발자 마음대로 설정 가능 0이 아니면 관리자 0 이 일반 사용자
     isAdmin: req.user.role === 0 ? false : true,
